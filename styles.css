@@ -1,0 +1,94 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+
+    max-width: 80vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#selectFormFieldset{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    outline: thin black solid;
+    gap: 1px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: thin black solid;
+}
+fieldset legend{
+    text-align: center;
+}
+
+fieldset fieldset {
+    padding-left: 0;
+    outline: none;
+}
+fieldset fieldset legend {
+    text-align: initial;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-group label {
+    font-size: smaller;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+    background-color: lightskyblue;
+    padding: 10px;
+}
+input[type="radio"]:checked + label {
+    background-color: blue;
+    color: white;
+}
+input[type="radio"]:hover + label {
+    background-color: #336699;
+    color: white;
+}
+#selectFormFieldset label:first-of-type{
+    border-radius: 20px 0 0 20px;
+}#selectFormFieldset label:last-of-type{
+    border-radius: 0px 20px 20px 0px;
+}
+
+#output{
+    font-size: 2vw;
+}

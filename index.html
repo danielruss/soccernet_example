@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta viewport="width=device-width, initial-scale=1.0">
+        <script src="browser.js" type="module"></script>
+        <title>SoccerNet testing</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <form id="SoccerNetFormElement">
+            <fieldset id="selectFormFieldset">
+                <input type="radio" id="showSingleJobForm" name="SelectForm" value="singleJob" checked data-form-id="run-single-example" aria-describedby="jobtitle-description">
+                <label for="showSingleJobForm">Enter a Single Job</label>
+                <span id="showsingleform-description" class="sr-only">Display the form for running a single job through SOCcerNET</span>
+                
+                <input type="radio" id="showFileForm" name="SelectForm" value="jobFile" data-form-id="run-file" aria-describedby="jobtitle-description">
+                <label for="showFileForm">Run Jobs In File</label>
+                <span id="showfileform-description" class="sr-only">Display the form for running a file of jobs through SOCcerNET</span>
+            </fieldset>
+
+            <fieldset id="run-single-example" aria-labelledby="single-example-label">
+                <legend id="single-example-label">SOCcerNET: Run single job</legend>
+                <div class="input-group">
+                    <label for="titleInputElement">Job Title</label>
+                    <input type="text" id="titleInputElement" name="titleInputElement" placeholder="Job Title" aria-describedby="jobtitle-description">
+                    <span id="jobtitle-description" class="sr-only">Enter a Job Title</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="taskInputElement">Job Task</label>
+                    <input type="text" id="taskInputElement" name="taskInputElement" placeholder="Job Task" aria-describedby="jobtask-description">
+                    <span id="jobtask-description" class="sr-only">Enter a Job Task</span>
+                </div>   
+                
+                <fieldset id="previous-codes" aria-labelledby="previous-codes-label">
+                    <legend id="previous-codes-label">Previous Codes</legend>
+                    <small>If the job has been previously coded, enter the codes here. Otherwise, leave blank.</small>
+                    <div class="input-group">
+                        <label for="soc1980InputElement">soc1980 code</label>
+                        <input type="text" id="soc1980InputElement" name="soc1980InputElement" placeholder="soc1980" aria-describedby="soc1980-description">
+                        <span id="soc1980-description" class="sr-only">Optional previously coded soc1980 code</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="noc2011InputElement">NOC2011 code</label>
+                        <input type="text" id="noc2011InputElement" name="noc2011InputElement" placeholder="noc2011" aria-describedby="noc2011-description">
+                        <span id="noc2011-description" class="sr-only">Optional previously coded soc1980 code</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="isco1988InputElement">ISCO1988 code</label>
+                        <input type="text" id="isco1988InputElement" name="isco1988InputElement" placeholder="isco1988" aria-describedby="isco1988-description">
+                        <span id="isco1988-description" class="sr-only">Optional previously coded isco1988 code</span>
+                    </div>
+                </fieldset>
+                <button type="button" id="runSingleJobButton" aria-label="Run SOCcerNET on one Job Description" data-disable-while-running="true">Run Single Example</button>
+            </fieldset>
+
+            <fieldset id="run-file" aria-labelledby="run-file-label">
+                <legend id="run-file-label">SOCcerNET: Load File of Job Descriptions</legend>
+                <div class="input-group">
+                    <label for="inputFileElement">Input File</label>
+                    <input type="file" id="inputFileElement" name="inputFileElement"  aria-describedby="inputfile-description" data-disable-while-running="true">
+                    <span id="inputfile-description" class="sr-only">Select a file of job descriptions for processing with SOCcerNET</span>
+                </div>
+                <div class="input-group">
+                    <label for="output_type">Output File Format</label>
+                    <select id="output_type" aria-describedby="output_type_description">
+                        <option value="Excel">Excel</option>
+                        <option value="CSV">CSV</option>
+                        <option value="JSONL">JSONL</option>
+                    </select>
+                    <span id="output_type_description" class="sr-only">Select the output file format for the SOCcerNET results</span>
+                </div>
+                <button type="button" id="runFileButton" aria-label="Run SOCcerNET on a File of Job Descriptions" data-disable-while-running="true">Run File of Jobs</button>
+            </fieldset>
+        </form>
+        <section id="output">
+        </section>
+    </body>
+</html>

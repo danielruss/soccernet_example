@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@danielruss/clips": "^0.0.7",
+    "@danielruss/soccernet": "^1.0.0"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}
