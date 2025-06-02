@@ -72,12 +72,12 @@ input[type="radio"] {
     display: none;
 }
 input[type="radio"] + label {
-    background-color: lightskyblue;
     padding: 10px;
+    border: thin solid black;
 }
 input[type="radio"]:checked + label {
-    background-color: blue;
-    color: white;
+    background-color: aqua;
+    color: black;
 }
 input[type="radio"]:hover + label {
     background-color: #336699;

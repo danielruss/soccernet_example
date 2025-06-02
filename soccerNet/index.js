@@ -1,4 +1,3 @@
-import * as soccerNET from 'http://localhost:5502/dist/browser/soccerNet.js'
-import * as clips from 'http://localhost:5502/dist/browser/soccerNet.js'
+import * as soccerNET from 'https://cdn.jsdelivr.net/npm/@danielruss/soccernet/+esm'
 
 console.log(Object.keys(soccerNET))

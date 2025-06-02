@@ -1,4 +1,5 @@
-import * as soccerNet from "https://cdn.jsdelivr.net/npm/@danielruss/soccernet/+esm"
+import * as soccerNet from "https://cdn.jsdelivr.net/npm/@danielruss/soccernet@latest/+esm"
+console.log("soccerNet loaded",Object.keys(soccerNet))
 
 const outputSuffixMap = new Map([ ['CSV','csv'],['Excel','xlsx'],["JSONL","jsonl"]])
 
